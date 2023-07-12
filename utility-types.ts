@@ -21,5 +21,9 @@ function updateTodo(todo: Todo, updatedTodoFields: TodoPartial) {
   };
 }
 
-type ParametersTypeOfUpdateTodo = Parameters<typeof updateTodo>;
-type ReturnTypeOfUpdateTodo = ReturnType<typeof updateTodo>;
+type TodoReadonly = Readonly<Todo>;
+
+type FunctionType = typeof updateTodo;
+
+type ParametersTypeOfUpdateTodo = Parameters<FunctionType>;
+type ReturnTypeOfUpdateTodo = ReturnType<FunctionType>;
